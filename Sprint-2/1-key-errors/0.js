@@ -20,7 +20,7 @@ function capitalise(str) {
 //    at wrapModuleLoad (node:internal/modules/cjs/loader:244:24)
  //   at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
  //   at node:internal/main/run_main_module:33:47
-//I realize that by adding a parameter in the function capitalize IS actually declaring the variable str, so we can't redeclate it below with let. I will remove the let and check again.
+//I realize that by adding a parameter in the function capitalize IS actually declaring the variable str, so we can't redeclare it below with let. I will remove the let and check again.
 
 function capitalise(str) {
    str = `${str[0].toUpperCase()}${str.slice(1)}`;
