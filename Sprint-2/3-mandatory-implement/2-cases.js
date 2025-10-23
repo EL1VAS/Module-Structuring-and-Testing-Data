@@ -12,5 +12,14 @@
 // Another example: "lord of the rings" should be "LORD_OF_THE_RINGS"
 
 // You will need to come up with an appropriate name for the function
+//I will name my function upperSnake.
+//I will first replace all spaces with underscores and then return everything in upper case letters.
+function upperSnake(str) {
+  str = str.replaceAll(" ", "_");
+  return str.toUpperCase();
+}
+
+console.log(upperSnake("Hello World"));
+
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
