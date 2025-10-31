@@ -52,3 +52,27 @@ test("should return 0 when input string is empty", () => {
   const count = countChar(str, char);
   expect(count).toEqual(0);
 });
+
+// Scenario: Special Characters
+// Given the input string str containing special characters,
+// And a special character char to search for,
+// When the function is called with these inputs,
+// Then it should correctly count the occurrences of the special character char in str.
+test("should count occurrences of special characters", () => {
+  const str = "!@#$$%^&*()_+!";
+  const char = "!";
+  const count = countChar(str, char);
+  expect(count).toEqual(2);
+});
+
+// Scenario: Case Sensitivity
+// Given the input string str containing both uppercase and lowercase letters,
+// And a character char to search for,
+// When the function is called with these inputs,
+// Then it should treat char as case-sensitive and only count occurrences that match the exact case in str.
+test("should treat character search as case-sensitive", () => {
+  const str = "aAaAaA";
+  const char = "a";
+  const count = countChar(str, char);
+  expect(count).toEqual(3);
+});
