@@ -14,12 +14,20 @@ To be valid, a password must:
 
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
-const isValidPassword = require("./password-validator");
+const {isAtLeastFive,
+    hasAtLeastOneUpperCase, 
+    hasAtLeastOneLowerCase, 
+    hasAtLeastOneNumber,
+    hasAtLeastOneSpecialCharacter,
+    isNewPassword,
+    passwordValidator} = require("./password-validator");
+
 test("password has at least 5 characters", () => {
     // Arrange
-    const password = "12345";
+    const password = "1Ab4&";
+    const passwords = ["gJ25!", "15#Ki", "6z9F*"]
     // Act
-    const result = isValidPassword(password);
+    const result = passwordValidator(password, passwords);
     // Assert
     expect(result).toEqual(true);
 }
