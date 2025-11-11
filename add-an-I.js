@@ -4,7 +4,7 @@ function drawStairs(n) {
         if (i > 0) {
             result += "\n";
         }
-        result += " ".repeat(n) + "I";
+        result += " ".repeat(i) + "I";
     }
     return result;
 }
